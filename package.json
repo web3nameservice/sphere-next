@@ -1,0 +1,46 @@
+{
+  "name": "3-wns-next-server-1",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@rainbow-me/rainbowkit": "^1.0.11",
+    "@vercel/analytics": "^1.0.2",
+    "autoprefixer": "10.4.15",
+    "axios": "1.2.1",
+    "bufferutil": "^4.0.7",
+    "debug": "^4.3.4",
+    "ethereum-blockies-base64": "^1.0.2",
+    "ethers": "^5.7.0",
+    "framer-motion": "^10.16.4",
+    "lodash": "^4.17.21",
+    "lodash.merge": "^4.6.2",
+    "next": "latest",
+    "next-nprogress-bar": "^2.1.2",
+    "postcss": "8.4.29",
+    "prop-types": "^15.8.1",
+    "punycode": "^2.3.0",
+    "react": "^18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.11.0",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-tooltip": "^5.21.3",
+    "sharp": "^0.32.5",
+    "supports-color": "^9.4.0",
+    "tailwindcss": "3.3.3",
+    "utf-8-validate": "^6.0.3",
+    "viem": "^1.10.8",
+    "wagmi": "^1.4.1",
+    "ws": "^8.14.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.22",
+    "typescript": "^5.2.2"
+  }
+}
