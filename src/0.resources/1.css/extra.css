@@ -54,8 +54,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 2rem;
-    width: 2rem;
+    height: 2.5rem;
+    width: 2.5rem;
     /* background: #fff; */
     transition: 500ms linear all;
     background-image: url('../../0.resources/3.files/logo/logo_color6.png');
