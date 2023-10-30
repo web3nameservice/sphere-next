@@ -9,7 +9,7 @@ const Home: FC = () => {
         <div className="">
 
             <div className=''>
-                <div className='w-screen h-screen opacity-40' style={{ backgroundImage: `url(${BgImg.src})`, backgroundSize: "cover", backgroundPosition: "center" }}>
+                <div className='w-screen h-screen opacity-60' style={{ backgroundImage: `url(${BgImg.src})`, backgroundSize: "cover", backgroundPosition: "center" }}>
                     {/* <div className='grid  grid-cols-3 lg:grid-cols-6 grid-rows-4 lg:grid-rows-6 absolute inset-0 opacity-50'>
                         {Array.from({ length: 100 }).map((item, index) => (
                             <div className='card__grid-effect-tile' key={index}>
@@ -28,10 +28,7 @@ const Home: FC = () => {
                 </div>
 
                 <div className="w-screen flex items-center justify-center gap-x-10 absolute bottom-0 overflow-hidden py-2 bg-white">
-                    {Array.from({ length: 15 }).map((item, index) => (
-                        <p className="text-black text-lg font-semibold whitespace-nowrap">Coming soon</p>
-                    )
-                    )}
+                    <p className="text-black text-lg font-semibold whitespace-nowrap">Coming soon</p>
                 </div>
             </div>
 
