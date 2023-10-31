@@ -1,6 +1,8 @@
 import { FC } from "react";
 import { PopularTokens } from "./popular_tokens";
 
+type TokenProps = typeof PopularTokens[0];
+
 const Swap: FC = () => {
     return (
         <div className="w-full mx-5 md:mx-0 flex items-center justify-center">
@@ -39,7 +41,7 @@ const Swap: FC = () => {
 
 export default Swap;
 
-const TokenDiv: FC = ({ items }) => {
+const TokenDiv: FC<{ items: TokenProps[] }> = ({ items }) => {
 
     return (
         <div className="w-full">

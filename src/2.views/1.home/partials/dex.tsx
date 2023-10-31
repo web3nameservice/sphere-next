@@ -90,7 +90,7 @@ const Dex: FC = () => {
 
 export default Dex;
 
-const Positions: FC = ({ items }) => {
+const Positions: FC<{ items: typeof PopularTokens }> = ({ items }) => {
     return (
         <div>
             {items.map((item, index) => (

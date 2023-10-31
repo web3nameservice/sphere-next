@@ -6,9 +6,14 @@ import Image from "next/image";
 import { BiSolidDownArrow, BiSolidDownArrowCircle } from "react-icons/bi";
 import { PiCoinsBold } from "react-icons/pi";
 
+interface IndicesProps {
+    name: string;
+    description: string;
+}
+
 const Indices: FC = () => {
     let max = window.innerWidth > 768 ? 4 : 2;
-    let items = [
+    let items: IndicesProps[] = [
         {
             name: "Crypto 100",
             description: "The top 100 crypto by market cap"
@@ -49,7 +54,7 @@ const Indices: FC = () => {
 
 export default Indices;
 
-const Indice: FC = ({ item }) => {
+const Indice: FC<{ item: IndicesProps }> = ({ item }) => {
     return (
         <div className="bg-dark800 rounded-2xl px-6 py-6">
             <div className="flex items-center justify-between">

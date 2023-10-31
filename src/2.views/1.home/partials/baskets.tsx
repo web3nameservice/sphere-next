@@ -2,9 +2,15 @@
 import { FC } from "react";
 import { PopularTokens } from "./popular_tokens";
 
+type TokenProps = typeof PopularTokens[0];
+
+interface BasketProps {
+    tokens: TokenProps[];
+}
+
 const Baskets: FC = () => {
     let max = window.innerWidth > 1024 ? 12 : window.innerWidth > 768 ? 9 : 4;
-    let items = []
+    let items: BasketProps[] = []
 
     for (let i = 0; i < max; i++) {
         items.push({
@@ -34,7 +40,7 @@ const Baskets: FC = () => {
 
 export default Baskets;
 
-const Basket: FC = ({ item }) => {
+const Basket: FC<{ item: BasketProps }> = ({ item }) => {
 
     let colors = [
         "bg-blue", "bg-red", "bg-green", "bg-yellow", "bg-pink", "bg-purple"
@@ -61,12 +67,12 @@ const Basket: FC = ({ item }) => {
     )
 }
 
-function getRandomItem(array) {
+function getRandomItem(array: any[]) {
     const shuffledArray = array.slice().sort(() => 0.5 - Math.random());
     return shuffledArray[0];
 }
 
-function getRandomItemsFromArray(array, numberOfItems) {
+function getRandomItemsFromArray(array: any[], numberOfItems: number) {
     if (numberOfItems >= array.length) {
         return array;
     } else {

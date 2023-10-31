@@ -8,9 +8,16 @@ import Dex from "./partials/dex";
 import Indices from "./partials/indices";
 import BgImgDark from "@/src/0.resources/3.files/images/bg-trans2.webp";
 
+interface HomeProps {
+    name: string;
+    item: JSX.Element;
+    color: string;
+    desc: string;
+}
+
 const Home: FC = () => {
 
-    let items = [
+    let items: HomeProps[] = [
         {
             name: "Multi Swap",
             item: <Swap />,
@@ -41,7 +48,7 @@ const Home: FC = () => {
         <div className="w-screen min-h-screen flex items-center justify-center" style={{ backgroundImage: `url(${BgImgDark.src})`, backgroundPosition: "center", backgroundRepeat: "repeat" }}>
             <div className="w-full h-full 2xl:w-[1600px] px-0 md:px-10 lg:px-20 2xl:px-10">
 
-                {items.map((item, index) => (
+                {items.map((item: HomeProps, index: number) => (
                     <div className={`${item.color} rounded-0 md:rounded-3xl sticky top-0 mb-0 md:mb-4`} style={{ backgroundImage: `url(${BgImgDark.src})`, backgroundPosition: "center", backgroundRepeat: "repeat" }}>
                         <div className={`py-8`}>
                             <div className="text-white">
