@@ -43,7 +43,7 @@ export default Baskets;
 const Basket: FC<{ item: BasketProps }> = ({ item }) => {
 
     let colors = [
-        "bg-blue", "bg-red", "bg-green", "bg-yellow", "bg-pink", "bg-purple"
+        "bg-blue-950", "bg-red-950", "bg-green-950", "bg-yellow-950", "bg-pink-950", "bg-purple-950"
     ]
 
     let tags = [
@@ -52,7 +52,7 @@ const Basket: FC<{ item: BasketProps }> = ({ item }) => {
 
     return (
         <div className="mt-4 bg-dark800 px-2 py-1 rounded-2xl">
-            <div className={`grid grid-cols-3 gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 px-2 md:px-4 py-2 md:py-4 rounded-2xl ${getRandomItem(colors)}-950`}>
+            <div className={`grid grid-cols-3 gap-x-2 md:gap-x-4 gap-y-2 md:gap-y-4 px-2 md:px-4 py-2 md:py-4 rounded-2xl ${getRandomItem(colors)}`}>
                 {item.tokens.map((token, index) => (
                     <div key={index}>
                         <img src={token.logoURI} className="w-8 h-8 rounded-lg" />
