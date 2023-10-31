@@ -42,8 +42,8 @@ export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({ children }) 
     useEffect(() => {
         if (darkMode) {
             document.body.classList.add('dark');
-            document.body.style.backgroundColor = "#0F0F0F";
-            document.documentElement.style.backgroundColor = "#0F0F0F";
+            document.body.style.backgroundColor = "#000";
+            document.documentElement.style.backgroundColor = "#000";
         } else {
             document.body.classList.remove('dark');
             document.body.style.backgroundColor = "#ffffff";

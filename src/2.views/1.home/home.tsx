@@ -2,38 +2,62 @@ import { FC } from "react";
 import Logo from "@/src/0.resources/3.files/logo/logo_color6.png";
 import BgImg from "@/src/0.resources/3.files/images/bg.gif";
 import Image from "next/image";
+import Swap from "./partials/swap";
+import Baskets from "./partials/baskets";
+import Dex from "./partials/dex";
+import Indices from "./partials/indices";
+import BgImgDark from "@/src/0.resources/3.files/images/bg-trans2.webp";
 
 const Home: FC = () => {
 
+    let items = [
+        {
+            name: "Multi Swap",
+            item: <Swap />,
+            color: "bg-blue-900",
+            desc: "Swap multiple cryptocurrencies in one transaction"
+        },
+        {
+            name: "Baskets",
+            item: <Baskets />,
+            color: "bg-rose-900",
+            desc: "Tradeable ready-made baskets of cryptocurrencies"
+        },
+        {
+            name: "Dex",
+            item: <Dex />,
+            color: "bg-purple-900",
+            desc: "Advanced limit and market orderbook for all ERC-20 tokens on multiple chains"
+        },
+        {
+            name: "Indices",
+            item: <Indices />,
+            color: "bg-green-900",
+            desc: "Tradeable decentralised indices which track the price of a market"
+        }
+    ]
+
     return (
-        <div className="">
+        <div className="w-screen min-h-screen flex items-center justify-center" style={{ backgroundImage: `url(${BgImgDark.src})`, backgroundPosition: "center", backgroundRepeat: "repeat" }}>
+            <div className="w-full h-full 2xl:w-[1600px] px-0 md:px-10 lg:px-20 2xl:px-10">
 
-            <div className=''>
-                <div className='w-screen h-screen opacity-60' style={{ backgroundImage: `url(${BgImg.src})`, backgroundSize: "cover", backgroundPosition: "center" }}>
-                    {/* <div className='grid  grid-cols-3 lg:grid-cols-6 grid-rows-4 lg:grid-rows-6 absolute inset-0 opacity-50'>
-                        {Array.from({ length: 100 }).map((item, index) => (
-                            <div className='card__grid-effect-tile' key={index}>
+                {items.map((item, index) => (
+                    <div className={`${item.color} rounded-0 md:rounded-3xl sticky top-0 mb-0 md:mb-4`} style={{ backgroundImage: `url(${BgImgDark.src})`, backgroundPosition: "center", backgroundRepeat: "repeat" }}>
+                        <div className={`py-8`}>
+                            <div className="text-white">
+                                {/* <p className="text-2xl font-semibold text-center">Sphere is</p> */}
+                                <p className="text-8xl font-bold text-center">{item.name}</p>
+                                <p className="text-2xl font-semibold text-center px-5">{item.desc}</p>
                             </div>
-                        )
-                        )}
-                    </div> */}
 
-                </div>
-                <div className="w-screen h-screen flex flex-col items-center justify-center z-10 pb-14 absolute top-0">
-                    <div className="cursor-pointer rounded-xl flex items-center gap-x-1">
-                        <Image src={Logo} className="rounded-full w-[80px] h-[80px] md:w-[100px] md:h-[100px]" alt="logo" priority={true} />
-                        <p className="font-semibold text-6xl md:text-7xl text-black dark:text-white">Sphere</p>
+                            <div className="pt-8 flex items-center justify-center">
+                                {item.item}
+                            </div>
+                        </div>
                     </div>
-                    <p className="text-xl md:text-2xl text-white font-semibold mt-4">The next generation of DeFi</p>
-                </div>
+                ))}
 
-                <div className="w-screen flex items-center justify-center gap-x-10 absolute bottom-0 overflow-hidden py-2 bg-white">
-                    <p className="text-black text-lg font-semibold whitespace-nowrap">Coming soon</p>
-                </div>
             </div>
-
-
-
         </div>
     );
 

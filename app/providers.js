@@ -21,13 +21,13 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
 const projectId = '7cbae94146e340a42c8fe9be4e6602a6';
 
 const { wallets } = getDefaultWallets({
-    appName: 'WNS: Web3 Name Service',
+    appName: 'Sphere',
     projectId,
     chains,
 });
 
 const demoAppInfo = {
-    appName: 'WNS: Web3 Name Service',
+    appName: 'Sphere',
 };
 
 const connectors = connectorsForWallets([

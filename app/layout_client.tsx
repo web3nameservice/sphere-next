@@ -8,7 +8,7 @@ interface RootLayoutProps {
 const LayoutClient: React.FC<RootLayoutProps> = ({ children }) => {
 
     return (
-        <div className={`w-full flex flex-none justify-center sticky top-0 z-40`}>
+        <div className={`w-full flex flex-none justify-center md:sticky top-0 z-40`}>
             <div className="w-full flex items-center justify-center">
                 {children}
             </div>
