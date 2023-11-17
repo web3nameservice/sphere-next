@@ -29,7 +29,7 @@ export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({ children }) 
                 return JSON.parse(savedMode);
             } else {
                 const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                return userPrefersDark;
+                return true;
             }
         }
         return true;
